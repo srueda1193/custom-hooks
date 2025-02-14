@@ -1,7 +1,17 @@
 import { useEffect, useReducer } from 'react'
-import { InitalState, Action } from '../08-useReducer/TodoApp';
-import { todoReducer } from '../08-useReducer/todoReducer';
+import { todoReducer } from './todoReducer';
 
+
+export interface InitalState {
+    id: number;
+    description: string,
+    done: boolean
+}
+
+export interface Action {
+    type: string,
+    payload: InitalState
+}
 
 const initialState: InitalState[] = [];
 
